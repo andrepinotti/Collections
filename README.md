@@ -35,3 +35,24 @@ Também implementa a interface List, armazena os elementos em uma lista duplamen
 # HashMap<K, V>
 
 Possui implementação padrão, não garante ordem de iteração. Eficiente para operações de busca, inserção e remoção.
+
+# LinkedHashMap
+
+ Mantém uma lista duplamente ligada através de seus itens. A ordem de iteração é a ordem em que as chaves são inseridas no mapa. Se for necessário um mapa onde os elementos são iterados na ordem em que foram inseridos, use esta implementação.
+ Ex:    linkedHashMap.put("Um", 1);
+        linkedHashMap.put("Dois", 2);
+        linkedHashMap.put("Três", 3);
+
+# TreeMap
+
+  Implementa a interface SortedMap. É baseado em uma estrutura de árvore vermelha-negra. Essa é uma árvore binária balanceada que garante que a altura da árvore permaneça relativamente pequena, o que contribui para a eficiência nas operações de inserção, remoção e busca. A ordenação no TreeMap é realizada com base nas chaves. A ordem natural das chaves é determinada pela implementação da interface Comparable pela classe das chaves ou por um comparador externo fornecido durante a criação do TreeMap. 
+
+# Considerações
+
+ Use HashMap se a ordem dos elementos não importa e a busca rápida é crítica.
+ Use TreeMap se a ordem dos elementos é importante.
+ Use LinkedHashMap se a ordem de inserção ou de acesso é importante.
+ 
+# Interface Set
+
+A interface Set representa uma coleção que não permite elementos duplicados. Cada elemento em um Set deve ser único. 
